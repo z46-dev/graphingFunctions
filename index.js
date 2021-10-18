@@ -1,4 +1,4 @@
 import { canvas, ctx } from "./canvas.js";
-import { draw, Slider } from "./draw.js";
+import { draw, Slider } from "./drawing.js";
 
-// do stuff
+draw(ctx, [function(x) { return Math.tan(x); }]);
