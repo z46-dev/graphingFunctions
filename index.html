@@ -1,5 +1,87 @@
-<body>
+<body oncontextmenu="return false;">
+    <style>
+        body {
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            font-family: Ubuntu;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+        }
+        #top {
+            width: 100%;
+            top: -75px;
+            position: absolute;
+            background: #A8A8A8;
+            padding: 10px;
+            transition: top 1s;
+        }
+        .topButton {
+            margin: 2.5px;
+            border-radius: 3px;
+            border: 3px solid #C8C8C8;
+            width: 150px;
+            display: inline-block;
+        }
+        canvas {
+            position: absolute;
+        }
+        #inputPad {
+            top: 25px;
+            left: 25px;
+            position: absolute;
+            display: none;
+            border-radius: 10px;
+            border: 3px solid #C8C8C8;
+            padding: 5px;
+            background: #E6E6E6;
+        }
+        .inputPadButton {
+            margin: 2.5px;
+            border-radius: 10px;
+            border: 3px solid #C8C8C8;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <canvas></canvas>
+    <div id="top">
+        <span>Coding Project - Desmos LITE - Evan Parker</span>
+        <button class="topButton" id="toggleButton">Open Input Pad</button>
+    </div>
+    <div id="inputPad">
+        <span id="equation">f(x)=</span><br/>
+        <button class="inputPadButton">1</button>
+        <button class="inputPadButton">2</button>
+        <button class="inputPadButton">3</button>
+        <button class="inputPadButton">4</button>
+        <button class="inputPadButton">5</button><br/>
+        <button class="inputPadButton">6</button>
+        <button class="inputPadButton">7</button>
+        <button class="inputPadButton">8</button>
+        <button class="inputPadButton">9</button>
+        <button class="inputPadButton">0</button><br/>
+        <button class="inputPadButton">+</button>
+        <button class="inputPadButton">-</button>
+        <button class="inputPadButton">*</button>
+        <button class="inputPadButton">/</button>
+        <button class="inputPadButton">^</button><br/>
+        <button class="inputPadButton">abs</button>
+        <button class="inputPadButton">cos</button>
+        <button class="inputPadButton">sin</button>
+        <button class="inputPadButton">tan</button>
+        <button class="inputPadButton">log</button><br/>
+        <button class="inputPadButton">x</button>
+        <button class="inputPadButton">(</button>  
+        <button class="inputPadButton">)</button>
+        <button class="inputPadButton">del</button>
+        <button class="inputPadButton">Go</button>
+    </div>
+    <script src="./clickHoldDrag.js"></script>
     <script src="./canvas.js" type="module"></script>
     <script src="./drawing.js" type="module"></script>
     <script src="./index.js" type="module"></script>
